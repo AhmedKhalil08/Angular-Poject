@@ -1,0 +1,23 @@
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+.dark-mode {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.dark-mode .card {
+    background-color: #2d2d2d;
+    color: white;
+}
+
+.dark-mode .btn-primary {
+    background-color: #0d6efd;
+}
+
+.dark-mode .navbar {
+    background-color: #111 !important;
+    color:white !important;
+}
+.dark-mode .nav-link,
+.dark-mode .navbar-brand {
+    color: white !important;
+}

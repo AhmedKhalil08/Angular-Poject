@@ -1,0 +1,46 @@
+<div>
+    <span>Total Price : </span><span>{{totalPrice}}</span>
+</div>
+@if(showToast){
+    <div class="toast show position-fixed top-0 end-0 m-3 text-bg-danger" style="z-index: 9999;">
+        <div class="toast-body">
+            Quantity Out Of Stock.
+        </div>
+    </div>
+}<br>
+<select class="form-select" aria-label="Default select example">
+  <option selected>Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+<br>
+<div class="row g-3 text-center">
+    @for(p of prdList ; track p.id ; let i=$index){
+    <div class="col-3">
+        <div class="card">
+        <img class="card-img-top" [src]="p.thumbnail" appZoom>
+        <div class="card-body">
+            <h5 class="card-title">{{p.title}}</h5>
+            <p class="card-text">{{p.category}}</p>
+            @switch(p.stock){
+                @case(0){
+            <p class="card-text text-danger"> Stock | Out Of Stock</p>
+                }
+                @case(1){
+            <p class="card-text text-warning"> Stock | {{p.stock}}</p>
+            }
+            @default{
+            <p class="card-text "> Stock | {{p.stock}}</p>
+            }
+             }   
+            <p class="card-text">{{p.description | descrip }}</p>
+            <p class="card-text">{{p.price}}</p>
+            <div><input [disabled]="p.stock===0" type="number" min="0" [max]="p.stock" #inp></div>
+            <br>
+            <button  class="btn btn-primary" (click)="buyProduct(inp,p)" >buy</button>
+        </div>
+        </div>
+    </div>
+    }
+</div>
