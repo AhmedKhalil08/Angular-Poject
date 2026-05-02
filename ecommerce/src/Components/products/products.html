@@ -8,15 +8,16 @@
         </div>
     </div>
 }<br>
-<select class="form-select" aria-label="Default select example">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
+<select class="form-select" [(ngModel)]="selectedCategory" (change)="filterByCategory()">
+    <!-- <option selected>Open this select menu</option> -->
+    <option value="all">All</option>
+    @for(cat of categories ; track cat ){
+    <option [value]="cat">{{cat}}</option>
+    }  
 </select>
 <br>
 <div class="row g-3 text-center">
-    @for(p of prdList ; track p.id ; let i=$index){
+    @for(p of filteretedList ; track p.id ; let i=$index){
     <div class="col-3">
         <div class="card">
         <img class="card-img-top" [src]="p.thumbnail" appZoom>
@@ -33,12 +34,12 @@
             @default{
             <p class="card-text "> Stock | {{p.stock}}</p>
             }
-             }   
+            }   
             <p class="card-text">{{p.description | descrip }}</p>
             <p class="card-text">{{p.price}}</p>
             <div><input [disabled]="p.stock===0" type="number" min="0" [max]="p.stock" #inp></div>
             <br>
-            <button  class="btn btn-primary" (click)="buyProduct(inp,p)" >buy</button>
+            <button [disabled]="p.stock===0" class="btn btn-primary" (click)="buyProduct(inp,p)" >buy</button>
         </div>
         </div>
     </div>
