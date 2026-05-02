@@ -1,0 +1,8 @@
+<button 
+    [class]="'btn btn-' + color" 
+    [style.width]="width" 
+    [style.height]="height" 
+    [disabled]="disabled"
+    (click)="action.emit()">
+    {{ title }}
+</button>

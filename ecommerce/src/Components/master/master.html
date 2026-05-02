@@ -1,0 +1,14 @@
+
+<div>
+    <span>Total Price : </span><span>{{totalPrice}}</span>
+</div>
+<br>
+<select class="form-select" [(ngModel)]="selectedCategory" >
+    <!-- <option selected>Open this select menu</option> -->
+    <option value="all">All</option>
+    @for(cat of categories ; track cat ){
+    <option [value]="cat">{{cat}}</option>
+    }  
+</select>
+
+<app-products  [selectedCategory]="selectedCategory" (total)="updateTotal($event)"></app-products>

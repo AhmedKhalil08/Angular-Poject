@@ -1,0 +1,9 @@
+<app-child >
+    <p>This from the parent</p>
+</app-child>
+<app-child>
+    <p #projectedText>This text is from parent!</p>
+</app-child>
+<button class="btn btn-primary" (click)="childRef.increament()">
+    Increment 
+</button>

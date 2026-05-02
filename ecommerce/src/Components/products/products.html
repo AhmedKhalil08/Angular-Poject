@@ -1,20 +1,10 @@
-<div>
-    <span>Total Price : </span><span>{{totalPrice}}</span>
-</div>
 @if(showToast){
     <div class="toast show position-fixed top-0 end-0 m-3 text-bg-danger" style="z-index: 9999;">
         <div class="toast-body">
             Quantity Out Of Stock.
         </div>
     </div>
-}<br>
-<select class="form-select" [(ngModel)]="selectedCategory" (change)="filterByCategory()">
-    <!-- <option selected>Open this select menu</option> -->
-    <option value="all">All</option>
-    @for(cat of categories ; track cat ){
-    <option [value]="cat">{{cat}}</option>
-    }  
-</select>
+}
 <br>
 <div class="row g-3 text-center">
     @for(p of filteretedList ; track p.id ; let i=$index){
@@ -39,7 +29,7 @@
             <p class="card-text">{{p.price}}</p>
             <div><input [disabled]="p.stock===0" type="number" min="0" [max]="p.stock" #inp></div>
             <br>
-            <button [disabled]="p.stock===0" class="btn btn-primary" (click)="buyProduct(inp,p)" >buy</button>
+<app-dynamic-button  title="Buy"  color="primary"  [disabled]="p.stock===0" (action)="buyProduct(inp,p)"> </app-dynamic-button>
         </div>
         </div>
     </div>
