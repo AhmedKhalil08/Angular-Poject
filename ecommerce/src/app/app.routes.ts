@@ -9,6 +9,7 @@ import { Dashboard } from '../Components/dashboard/dashboard';
 import { Signup } from '../Components/signup/signup';
 
 export const routes: Routes = [
+      { path: '', redirectTo: 'signin', pathMatch: 'full' },
 { path: 'signin', component: SignIn },
 { path: 'signup', component: Signup }, {
         path: '', 
