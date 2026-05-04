@@ -1,0 +1,104 @@
+{
+  "users": [
+    {
+      "id": "2",
+      "firstName": "Sara",
+      "lastName": "Ali",
+      "email": "sara@email.com",
+      "username": "sara_ali",
+      "password": "Sara5678",
+      "address": "45 Corniche Rd, Alexandria"
+    },
+    {
+      "id": "3",
+      "firstName": "Omar",
+      "lastName": "Khaled",
+      "email": "omar@email.com",
+      "username": "omar_k",
+      "password": "Omar9012",
+      "address": "8 Nile View, Giza"
+    },
+    {
+      "id": "4",
+      "firstName": "Nour",
+      "lastName": "Mohamed",
+      "email": "nour@email.com",
+      "username": "nour_m",
+      "password": "Nour3456",
+      "address": "23 Zamalek St, Cairo"
+    },
+    {
+      "id": "5",
+      "firstName": "Youssef",
+      "lastName": "Ibrahim",
+      "email": "youssef@email.com",
+      "username": "youssef_i",
+      "password": "Yous7890",
+      "address": "67 Port Said Rd, Suez"
+    },
+    {
+      "id": "6",
+      "firstName": "Mona",
+      "lastName": "Farid",
+      "email": "mona@email.com",
+      "username": "mona_f",
+      "password": "Mona1234",
+      "address": "15 Heliopolis Ave, Cairo"
+    },
+    {
+      "id": "7",
+      "firstName": "Khaled",
+      "lastName": "Samir",
+      "email": "khaled@email.com",
+      "username": "khaled_s",
+      "password": "Khal5678",
+      "address": "30 Maadi Ring Rd, Cairo"
+    },
+    {
+      "id": "8",
+      "firstName": "Layla",
+      "lastName": "Tamer",
+      "email": "layla@email.com",
+      "username": "layla_t",
+      "password": "Layl9012",
+      "address": "9 Stanley Bridge, Alexandria"
+    },
+    {
+      "id": "10",
+      "firstName": "Dina",
+      "lastName": "Mostafa",
+      "email": "dina@email.com",
+      "username": "dina_m",
+      "password": "Dina7890",
+      "address": "18 Nasr City Blvd, Cairo"
+    },
+    {
+      "id": "11",
+      "firstName": "Tamer",
+      "lastName": "Gamal",
+      "email": "tamer@email.com",
+      "username": "tamer_g",
+      "password": "Tame1234",
+      "address": "42 Smouha, Alexandria"
+    },
+    {
+      "username": "ahmedkhalil",
+      "password": "1234",
+      "firstName": "ahmed",
+      "lastName": "khalil",
+      "email": "ahmed@gmail.com",
+      "address": "Tanta",
+      "id": "28YoNFr-lH0"
+    },
+    {
+      "username": "ahmed",
+      "password": "123456",
+      "firstName": "ahmed",
+      "lastName": "khalil",
+      "email": "ahmed3@gmail.com",
+      "address": "tanta",
+      "id": "nm-8auDU76M"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

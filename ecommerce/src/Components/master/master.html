@@ -11,4 +11,4 @@
     }  
 </select>
 
-<app-products  [selectedCategory]="selectedCategory" (total)="updateTotal($event)"></app-products>
+<app-products  [selectedCategory]="selectedCategory" [categories]="categories"  (total)="updateTotal($event)"></app-products>
